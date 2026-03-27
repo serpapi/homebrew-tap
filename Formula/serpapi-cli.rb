@@ -17,6 +17,6 @@ class SerpapiCli < Formula
 
   test do
     output = shell_output("#{bin}/serpapi search engine=google q=coffee")
-    assert_match "coffee", output
+    assert_match "organic_results", output
   end
 end
