@@ -1,5 +1,5 @@
 class SerpapiCli < Formula
-  desc "CLI client for SerpApi — fast search scraping for humans and AI agents"
+  desc "HTTP client for structured web search data via SerpApi"
   homepage "https://github.com/serpapi/serpapi-cli"
   url "https://github.com/serpapi/serpapi-cli/archive/refs/tags/v0.1.0.tar.gz"
   sha256 "52a61ee808fdb2c15fe103e472be62455a2fb225e45c5a8849b6c095cf068499"
