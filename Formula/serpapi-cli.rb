@@ -1,8 +1,8 @@
 class SerpapiCli < Formula
   desc "HTTP client for structured web search data via SerpApi"
   homepage "https://github.com/serpapi/serpapi-cli"
-  url "https://github.com/serpapi/serpapi-cli/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "52a61ee808fdb2c15fe103e472be62455a2fb225e45c5a8849b6c095cf068499"
+  url "https://github.com/serpapi/serpapi-cli/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "b4dcdb65570b427aaa8f3be4daad83dcb9d0d6103f1f5991ee5f0de826f5af95"
   license "MIT"
   head "https://github.com/serpapi/serpapi-cli.git", branch: "main"
 
@@ -16,7 +16,7 @@ class SerpapiCli < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/serpapi --version")
-    assert_match "search", shell_output("#{bin}/serpapi --help")
+    output = shell_output("#{bin}/serpapi search engine=google q=coffee")
+    assert_match "coffee", output
   end
 end
