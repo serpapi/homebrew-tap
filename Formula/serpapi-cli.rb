@@ -9,7 +9,8 @@ class SerpapiCli < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-s -w"), "./cmd/serpapi"
+    ldflags = %W[-s -w -X github.com/serpapi/serpapi-cli/pkg/version.Version=#{version}]
+    system "go", "build", *std_go_args(ldflags: ldflags), "./cmd/serpapi"
   end
 
   test do
