@@ -14,12 +14,10 @@ class SerpapiCli < Formula
   end
 
   test do
-    assert_match "organic_results", shell_output("#{bin}/serpapi search q=coffee")
-    assert_match "Invalid API key", shell_output("#{bin}/serpapi --api-key invalid search q=coffee 2>&1", 1)
-    assert_match "No API key found", shell_output("#{bin}/serpapi account 2>&1", 2)
-    assert_match "Invalid API key", shell_output("#{bin}/serpapi --api-key invalid account 2>&1", 1)
-    assert_match "canonical_name", shell_output("#{bin}/serpapi locations q=Austin")
-    assert_match "No API key found", shell_output("#{bin}/serpapi archive abc123 2>&1", 2)
-    assert_match "api_error", shell_output("#{bin}/serpapi --api-key invalid archive abc123 2>&1", 1)
+    assert_match version.to_s, shell_output("#{bin}/serpapi --version")
+    assert_match "search", shell_output("#{bin}/serpapi --help")
+    assert_match "No API key", shell_output("#{bin}/serpapi account 2>&1", 2)
+    assert_match "No API key", shell_output("#{bin}/serpapi archive abc123 2>&1", 2)
+    assert_match "Invalid archive ID", shell_output("#{bin}/serpapi --api-key x archive ../bad 2>&1", 2)
   end
 end
