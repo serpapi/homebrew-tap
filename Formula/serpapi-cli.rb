@@ -1,26 +1,26 @@
 class SerpapiCli < Formula
   desc "HTTP client for structured web search data via SerpApi"
   homepage "https://serpapi.com"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.0/serpapi_0.5.0_darwin_arm64.tar.gz"
-      sha256 "52e0fff866215d20a8b8f6b21cc71da524eed443d48af74fdef7f8d35004cb5b"
+      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.1/serpapi_0.5.1_darwin_arm64.tar.gz"
+      sha256 "eb6b4f2f3e55825587eca567501b786c13e7f785e71939123d0453dd8e909c95"
     else
-      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.0/serpapi_0.5.0_darwin_amd64.tar.gz"
-      sha256 "eeecdef475d6bf4a25fe6cb5558783edf901cfa530e9e052682be910ecf21858"
+      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.1/serpapi_0.5.1_darwin_amd64.tar.gz"
+      sha256 "c45eca7d655b09038499b17ba0d1a7af7a766dc98d5b030ab7fb481e46b1e8ba"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.0/serpapi_0.5.0_linux_arm64.tar.gz"
-      sha256 "dd71e289f113912fbec0caffae43302e595fd0c31e47c401ad4c3ee37f147e56"
+      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.1/serpapi_0.5.1_linux_arm64.tar.gz"
+      sha256 "41bf93663754f481de3aac1381cedb4eef1e4c750026a910552b2faa4e47471e"
     else
-      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.0/serpapi_0.5.0_linux_amd64.tar.gz"
-      sha256 "5ed775339c18feec9c1b489f335fede237601a4fe9eb0aa5a2224065f0c4ce82"
+      url "https://github.com/serpapi/serpapi-cli/releases/download/v0.5.1/serpapi_0.5.1_linux_amd64.tar.gz"
+      sha256 "cbac1ddb672cbcd1070d27363855c84cc80979a4870057589d5249db3adc6ef2"
     end
   end
 
